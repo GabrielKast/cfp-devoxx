@@ -31,7 +31,7 @@ Copyright (c) 2013 Association du Paris Java User Group & [Nicolas Martignole](h
 The CFP was originally created in 2013 for the [Devoxx France](http://www.devoxx.fr/) 2014 edition. Devoxx France is one of the biggest conference for Developers in France with 2500 attendees in 2015.
 The conference had top sponsors like Google, Oracle, IBM and Microsoft. The conference is organized by Nicolas Martignole, Antonio Goncalvès and Zouheir Cadi.
  
-The CFP is implemented with Scala and Play Framework v2.2.3. Redis 2.8 is used for persistence. Elastic Search is integrated as a search engine and to calculate stats with Facets.
+The CFP is implemented with Scala and Play Framework v2.3.10. Redis 2.8 is used for persistence. Elastic Search is integrated as a search engine and to calculate stats with Facets.
  
 ## Which Conferences are using it?
 
@@ -72,7 +72,9 @@ A docker compose file is provided with Redis and Elastic Search configuration.
 
 To connect to your local Redis Cli, you can use this command line as an example :
 
-```docker run -it --link cfpdevoxx_redis_1:redis --rm redis sh -c 'exec redis-cli -h "$REDIS_PORT_6379_TCP_ADDR" -p "$REDIS_PORT_6379_TCP_PORT"'``
+```
+docker run -it --link cfpdevoxx_redis_1:redis --rm redis sh -c 'exec redis-cli -h "$REDIS_PORT_6379_TCP_ADDR" -p "$REDIS_PORT_6379_TCP_PORT"'
+```
 
 ## Here's what you need to configure:
 
